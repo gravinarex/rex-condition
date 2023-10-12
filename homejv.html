@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript Variables Home</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <h1 style="color: greenyellow;">WELCOME TO RICK AND MORTY WORKS</h1>
+
+    <button type="button" onclick="logout()">Logout</button>
+
+    <br>
+    <p>
+    	<button><a href="homecf.html">NEXT ----->> </a></button>
+
+    </p>
+  
+
+    <div class="div1">
+        <h1 style="color: greenyellow;">JavaScript Variables</h1>
+
+        <p style="color: DodgerBlue;">The result of adding 5 + 2 + 3 is:</p>
+        <p id="demo1">ANSWER</p>
+        <button type="button" onclick="adding()">Show Result</button>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3>Input Two numbers:</h3>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button type="button" onclick="addnum()">ADD</button>
+        <p style="color: DodgerBlue;">The sum is: </p><p id="demo2">ANSWER</p>
+
+        <br>
+        <br>
+
+        <br>
+        <br>
+
+        <h3>Input Two numbers:</h3>
+        <input type="number" id="num3">
+        <input type="number" id="num4">
+        <button type="button" onclick="subnum()">SUBTRACT</button>
+        <p style="color: DodgerBlue;">The difference is: </p><p id="demo3">ANSWER</p>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3>Input Two numbers:</h3>
+        <input type="number" id="num5">
+        <input type="number" id="num6">
+        <button type="button" onclick="mulnum()">MULTIPLY</button>
+        <p style="color: DodgerBlue;">The product is: </p><p id="demo4">ANSWER</p>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3>Input Two numbers:</h3>
+        <input type="number" id="num7">
+        <input type="number" id="num8">
+        <button type="button" onclick="divnum()">DIVIDE</button>
+        <p style="color: DodgerBlue;">The quotient is: </p><p id="demo5">ANSWER</p>
+    </div>
+
+    <script>
+        function logout() {
+            let response = confirm("Are you sure you want to log out?");
+            if (response) {
+                // This will close the current window, so you might want to adjust this behavior.
+                // window.close();
+                window.location.href = 'index.html'; // Use location.href to navigate to a new page.
+            }
+        }
+
+        function adding() {
+            let x = 5 + 2 + 3;
+            document.getElementById("demo1").innerHTML = x;
+        }
+
+        function addnum() {
+            let a = parseInt(document.getElementById("num1").value);
+            let b = parseInt(document.getElementById("num2").value);
+            let x = a + b;
+            document.getElementById("demo2").innerHTML = x;
+        }
+
+        function subnum() {
+            let a = parseInt(document.getElementById("num3").value);
+            let b = parseInt(document.getElementById("num4").value);
+            let x = a - b;
+            document.getElementById("demo3").innerHTML = x;
+        }
+
+        function mulnum() {
+            let a = parseInt(document.getElementById("num5").value);
+            let b = parseInt(document.getElementById("num6").value);
+            let x = a * b;
+            document.getElementById("demo4").innerHTML = x;
+        }
+
+        function divnum() {
+            let a = parseInt(document.getElementById("num7").value);
+            let b = parseInt(document.getElementById("num8").value);
+            let x = a / b;
+            document.getElementById("demo5").innerHTML = x;
+        }
+    </script>
+</body>
+</html>
